@@ -1,0 +1,22 @@
+<table class="price-table">
+  <thead>
+      <tr>
+        <td>Price(Rs)</td>
+        <td>Type</td>
+        <td>Open(Rs)</td>
+        <td>Volume</td>
+        <td>Value(Rs)</td>
+        <td>Change(%)</td>
+      </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let quote of quotes">
+      <td>{{ quote.Type }}</td>
+      <td>{{ quote.Price }}</td>
+      <td>{{ quote.Open }}</td>
+      <td>{{ quote.Volume }}</td>
+      <td>{{ quote.Value }}</td>
+      <td>{{ quote.Change }}</td>
+    </tr>
+  </tbody>
+</table>

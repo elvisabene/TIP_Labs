@@ -1,0 +1,19 @@
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin: 5vw;
+  width: 90vw;
+}
+
+thead td {
+  color: aquamarine;
+}
+
+td {
+  font-size: 1.5em;
+  border: 3px solid #ac9;
+  column-span: 3;
+  width: 10vw;
+  resize: none;
+  min-width: 20em;
+}
