@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {IndexComponent} from "./index/index.component";
-import {Route, RouterLinkWithHref, RouterOutlet, Routes} from "@angular/router";
+import { Route, RouterLinkWithHref, RouterOutlet } from "@angular/router";
 import { AdsComponent } from './ads/ads.component';
 import { AddressComponent } from './address/address.component';
 import { CatalogComponent } from './catalog/catalog.component';
 
-export const lab1routing: Route = {
+export const lab1Routes: Route = {
     path: 'lab1', component: IndexComponent, children: [
       {path: '', redirectTo: 'address', pathMatch: 'full'},
       {path: 'ads', component: AdsComponent, pathMatch: 'full',},

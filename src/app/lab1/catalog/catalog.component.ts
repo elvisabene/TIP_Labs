@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {services} from "../models/services";
+import { services } from "../models/services";
 
 @Component({
   selector: 'app-catalog',
@@ -14,5 +14,4 @@ export class CatalogComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
