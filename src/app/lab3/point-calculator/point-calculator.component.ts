@@ -61,6 +61,10 @@ export class PointCalculatorComponent implements OnInit {
   }
 
   public swapValues() {
+    if (!this.value1 || !this.value2) {
+      return;
+    }
+
     const tmp = this.value1;
     this.value1 = this.value2;
     this.value2 = tmp;
