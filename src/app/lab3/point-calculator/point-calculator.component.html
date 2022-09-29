@@ -1,0 +1,34 @@
+<h3>Task 2</h3>
+
+<div *ngFor="let point of points">
+  <label for="{{ point.X.Id }}">{{ point.X.Name }}</label>
+  <input id="{{ point.X.Id }}" (input)="changeValue($event)" type="text" />
+  <label for="{{ point.Y.Id }}">{{ point.Y.Name }}</label>
+  <input id="{{ point.Y.Id }}" (input)="changeValue($event)" type="text" />
+</div>
+
+<div>
+  <label for="square">Square of triangle:</label>
+  <input id="square" type="text" (focus)="calculateSquare($event)"/>
+</div>
+
+<h3>Task 3</h3>
+
+<div>
+  <label for="point">Enter point coordinates with space separation: </label>
+  <input id="point" (select)="calculateDistance($event)" type="text" />
+</div>
+
+<div>
+  <label for="distance">Distance from the origin: </label>
+  <span id="distance">{{ distance ? distance : "Unknown" }}</span>
+</div>
+
+<h3>Task 4</h3>
+
+<p>Swap values on blur:</p>
+
+<div>
+  <input id="value1" (blur)="swapValues()" [(ngModel)]="value1" type="text">
+  <input id="value2" (blur)="swapValues()" [(ngModel)]="value2" type="text">
+</div>
