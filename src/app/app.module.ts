@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { Lab1Module } from "./lab1/lab1.module";
+import { Lab5Module } from "./lab5/lab5.module";
 
 @NgModule({
   declarations: [
@@ -14,7 +14,7 @@ import { Lab1Module } from "./lab1/lab1.module";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    Lab1Module,
+    Lab5Module,
   ],
   providers: [],
   bootstrap: [AppComponent]

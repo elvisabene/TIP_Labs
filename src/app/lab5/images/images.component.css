@@ -1,0 +1,54 @@
+.task {
+  margin: 1em;
+  border: 2px solid red;
+  border-radius: 1em;
+  overflow: hidden;
+}
+
+.scaled {
+  height: 70vh;
+}
+
+h3 {
+  text-align: center;
+}
+
+.flexed {
+  display: flex;
+  justify-content: space-around;
+}
+
+img {
+  width: 30vw;
+  height: 50vh;
+  margin: 20px;
+}
+
+.menu {
+  padding: 2em;
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu-item {
+  font-size: 2em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.arrow {
+  width: 10vw;
+  height: 10vh;
+}
+
+.arrow img {
+  width: 7vw;
+  height: 9vh;
+}
+
+.menu-item-name {
+  width: 10vw;
+  padding: 20px 0;
+}

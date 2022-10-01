@@ -1,0 +1,37 @@
+<div class="task">
+  <h3>Task 2</h3>
+  <div class="flexed">
+    <img *ngFor="let image of images"
+         (click)="setPicture(image)"
+         src="{{ image.source }}" alt="">
+  </div>
+  <div class="flexed">
+    <img [hidden]="!selectedSrc" [src]="selectedSrc" alt="">
+  </div>
+</div>
+
+<div class="task scaled">
+  <h3>Task 3</h3>
+  <div class="flexed">
+    <img *ngFor="let image of images"
+         [@scale]="image.state"
+         (mouseenter)="increase(image)"
+         (mouseleave)="decrease(image)"
+         src="{{ image.source }}" alt="">
+  </div>
+</div>
+
+<div class="task">
+  <h3>Task 4</h3>
+  <div class="menu">
+    <div *ngFor="let menuItem of menuItems" class="menu-item">
+      <div class="arrow">
+        <img [hidden]="!menuItem.isSelected"
+             src="assets/pics/arrow.png" alt="">
+      </div>
+      <span class="menu-item-name"
+            (mouseenter)="select(menuItem)"
+            (mouseleave)="unselect(menuItem)">{{ menuItem.name }}</span>
+    </div>
+  </div>
+</div>
