@@ -1,0 +1,29 @@
+<h3>Task 1</h3>
+<button (click)="getFruit()">GET FRUIT</button>
+
+<h3>Task 2</h3>
+<form #myForm="ngForm">
+  <div class="field">
+    <label>A: </label>
+    <input name="start" ngModel />
+  </div>
+
+  <div class="field">
+    <label>B: </label>
+    <input name="end" ngModel />
+  </div>
+
+  <div class="field">
+    <label>Length: </label>
+    <input name="length" ngModel />
+  </div>
+
+</form>
+
+<div class="field">
+  <button (click)="createArray(myForm)">Create array</button>
+</div>
+
+<div class="field">
+  <button (click)="createSequence()">Generate</button>
+</div>

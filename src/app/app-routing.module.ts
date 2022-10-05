@@ -5,6 +5,7 @@ import {lab2Routes} from "./lab2/lab2.module";
 import {lab3Routes} from "./lab3/lab3.module";
 import {lab4Routes} from "./lab4/lab4.module";
 import {lab5Routes} from "./lab5/lab5.module";
+import {lab6Routes} from "./lab6/lab6.module";
 
 const routes: Routes = [
   lab1Routes,
@@ -12,6 +13,7 @@ const routes: Routes = [
   lab3Routes,
   lab4Routes,
   lab5Routes,
+  lab6Routes,
 ];
 
 @NgModule({
