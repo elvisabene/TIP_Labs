@@ -1,0 +1,40 @@
+form {
+  font-size: 1.3em;
+}
+
+.table-form {
+  margin: 2em 18vw;
+  width: 64vw;
+  border: 2px solid red;
+}
+
+.table-form th {
+  border: 2px solid orange;
+}
+
+.table-form td {
+  border: 2px solid blue;
+  padding: 10px;
+}
+
+.input-set {
+  display: inline-block;
+}
+
+tfoot {
+  text-align: center;
+}
+
+.reset-button {
+  font-size: inherit;
+  width: 10vw;
+  height: 2.5rem;
+  margin: 2vh 45vw;
+  background-color: orange;
+  border: 0;
+  border-radius: 10px;
+}
+
+.reset-button:hover {
+  background-color: darkorange;
+}

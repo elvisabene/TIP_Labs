@@ -1,0 +1,73 @@
+<form>
+
+  <app-profile-form></app-profile-form>
+
+  <table class="table-form">
+    <thead>
+      <th *ngFor="let header of tableHeaders">{{ header }}</th>
+    </thead>
+    <tbody>
+    <tr *ngFor="let course of courses; let i = index">
+      <td>
+        <input
+          id="c{{ course.Name.Value }}-{{ course.Id }}"
+          type="checkbox"
+          value="1234"
+          [checked]="course.Name.IsChecked"
+          (change)="selectCourse(course, $event)"
+        />
+        <label for="c{{ course.Name.Value }}-{{ course.Id }}">{{ course.Name.Value }}</label>
+      </td>
+      <td>
+        <div
+          class="input-set"
+          *ngFor="let duration of course.Durations.Items; let i = index">
+          <input
+            id="d{{ duration.Value }}-{{ course.Id }}-id"
+            name="duration-{{ course.Id }}"
+            [checked]="i === course.Durations.SelectedIndex"
+            (change)="selectDuration(course, i)"
+            type="radio"
+          >
+          <label for="d{{ duration.Value }}-{{ course.Id }}-id">{{ duration.Value }}</label>
+        </div>
+      </td>
+      <td>
+        <div
+          class="input-set"
+          *ngFor="let language of course.Languages.Items; let i = index">
+          <input
+            id="l{{ language.Name }}-{{ course.Id }}-id"
+            name="language-{{ course.Id }}"
+            [checked]="i === course.Languages.SelectedIndex"
+            (change)="selectLanguage(course, i)"
+            type="radio">
+          <label for="l{{ language.Name }}-{{ course.Id }}-id">{{ language.Name }}</label>
+        </div>
+      </td>
+      <td>
+        <div
+          class="input-set"
+          *ngFor="let reportingType of course.ReportingTypes.Items; let i = index">
+          <input
+            id="rt{{ reportingType.Value }}-{{ course.Id }}-id"
+            name="reportingType-{{ course.Id }}"
+            [checked]="i === course.ReportingTypes.SelectedIndex"
+            (change)="selectReportingType(course, i)"
+            type="radio">
+          <label for="rt{{ reportingType.Value }}-{{ course.Id }}-id">{{ reportingType.Value }}</label>
+        </div>
+      </td>
+      <td>
+        {{ (course.Name.IsChecked ? course.Cost : 0) | currency }}
+      </td>
+    </tr>
+    </tbody>
+    <tfoot>
+      <td colspan="6">Final cost: {{ finalCost | currency }}</td>
+    </tfoot>
+  </table>
+
+  <button class="reset-button" (click)="reset()" type="button">Reset</button>
+
+</form>

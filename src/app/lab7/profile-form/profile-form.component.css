@@ -1,0 +1,28 @@
+.field-sets {
+  display: flex;
+  justify-content: space-around;
+}
+
+.field {
+  display: inline-block;
+
+  margin: 10px;
+  background: aquamarine;
+}
+
+.field label {
+  display: inline-block;
+  margin: 5px;
+  width: 6vw;
+}
+
+.field input {
+  width: 20vw;
+  font-size: 1em;
+  border: 0.1rem solid blue;
+  border-radius: 0.5em;
+}
+
+.error-messages {
+  color: red;
+}

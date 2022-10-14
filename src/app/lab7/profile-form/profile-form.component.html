@@ -1,0 +1,17 @@
+<form>
+  <div class="field-sets">
+
+    <fieldset
+      class="field"
+      *ngFor="let descriptor of inputDescriptors">
+        <label for="{{ descriptor.InputId }}">{{ descriptor.Label }}</label>
+        <input type="{{ descriptor.InputType }}" [formControl]="descriptor.Control">
+        <div *ngIf="descriptor.Control.errors" class="error-messages">
+          <span *ngIf="descriptor.Control.errors['required']"> Field is required! </span>
+          <span *ngIf="descriptor.Control.errors['minlength']"> Too short! </span>
+          <span *ngIf="descriptor.Control.errors['email']"> Invalid email address! </span>
+        </div>
+    </fieldset>
+
+  </div>
+</form>
