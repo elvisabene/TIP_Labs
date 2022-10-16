@@ -1,0 +1,26 @@
+#workers {
+  font-size: 1.4em;
+}
+
+#add-button {
+  text-align: center;
+  width: 8em;
+  font-size: 1.2rem;
+  background-color: lime;
+  padding: 10px 20px;
+  margin: 5px 20px;
+  border: transparent;
+  border-radius: 20px;
+}
+
+#remove-button {
+  font-size: 1.1rem;
+  background-color: crimson;
+  padding: 5px 10px;
+  border: transparent;
+  border-radius: 20px;
+}
+
+input[type="button"]:hover {
+  cursor: pointer;
+}

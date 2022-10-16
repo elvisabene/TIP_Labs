@@ -1,0 +1,13 @@
+<form>
+  <label for="time-input">The lesson started at: </label>
+  <input
+    id="time-input"
+    type="time"
+    name="time"
+    (change)="onTimeChange($event)"
+  />
+
+  <p *ngIf="lessonStartTime">
+    The lesson lasts for {{ timeFromLessonStart | async }}
+  </p>
+</form>

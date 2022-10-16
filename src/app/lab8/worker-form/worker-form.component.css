@@ -1,0 +1,49 @@
+.worker-fields {
+  display: inline-block;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.worker-field-set {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  border: solid 3px blue;
+  border-radius: 20px;
+}
+
+label {
+  display: inline-block;
+  width: 13.5vw;
+}
+
+.field input {
+  width: 15vw;
+  font-size: 1rem;
+  border-radius: 15px;
+  padding: 4px;
+}
+
+.field {
+  padding: 4px;
+}
+
+#remove-button {
+  font-size: 1.1rem;
+  background-color: crimson;
+  padding: 5px 10px;
+  border: transparent;
+  border-radius: 20px;
+  margin: 5px 25%;
+  width: 50%;
+}
+
+input[type="button"]:hover {
+  cursor: pointer;
+}
+
+input[disabled] {
+  border: transparent;
+  color: black;
+}

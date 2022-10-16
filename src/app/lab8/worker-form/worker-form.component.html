@@ -1,0 +1,47 @@
+<div [formGroup]="form" class="worker-field-set">
+  <div class="field">
+    <label for="worker-name">Name:</label>
+    <input id="worker-name" type="text" formControlName="name">
+  </div>
+  <div class="field">
+    <label for="worker-payment">
+      Payment per hour ($):
+    </label>
+    <input id="worker-payment" type="number"
+           formControlName="paymentPerHour"
+           (ngModelChange)="paymentChange()">
+  </div>
+  <div class="field">
+    <label for="worker-start-date">
+      Start date:
+    </label>
+    <input id="worker-start-date" type="date"
+           formControlName="startDate"
+           (ngModelChange)="dateChange()">
+  </div>
+  <div class="field">
+    <label for="worker-end-date">
+      End date:
+    </label>
+    <input id="worker-end-date" type="date"
+           formControlName="endDate"
+           (ngModelChange)="dateChange()">
+  </div>
+  <div class="field" *ngIf="workingDays">
+    <label id="working-days">Working days:</label>
+    <input disabled type="text" value="{{ workingDays }}" />
+  </div>
+  <div class="field" *ngIf="weekendDays">
+    <label id="weekend-days">Weekend days:</label>
+    <input disabled type="text" value="{{ weekendDays }}" />
+  </div>
+  <div class="field" *ngIf="salary">
+    <label id="salary">Salary:</label>
+    <input disabled type="text" value="{{ salary | currency }}" />
+  </div>
+  <input
+    id="remove-button"
+    type="button" value="Remove"
+    (click)="emitRemove()"
+  />
+</div>

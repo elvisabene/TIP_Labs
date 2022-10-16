@@ -1,0 +1,21 @@
+<app-time-display></app-time-display>
+
+<div id="workers">
+
+    <h2>Workers</h2>
+
+    <div class="control-buttons">
+      <input
+        id="add-button"
+        (click)="addWorker()"
+        type="button" value="Add worker"/>
+    </div>
+
+    <div>
+      <app-worker-form
+        *ngFor="let number of workerNumbers"
+        (remove)="removeWorker(number)"
+      ></app-worker-form>
+    </div>
+
+</div>
