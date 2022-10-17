@@ -1,0 +1,20 @@
+#main-block {
+  font-size: 1.5em;
+}
+
+.picture {
+
+  border-radius: 0.6em;
+}
+
+.caption {
+  width: fit-content;
+  background-color: blue;
+  padding: 1ex;
+  border-radius: 0.5em;
+}
+
+.caption:hover {
+  cursor: url("../../../assets/pics/brush_min.png"), pointer;
+  background-color: lime;
+}

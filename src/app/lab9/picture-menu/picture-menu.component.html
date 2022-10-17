@@ -1,0 +1,11 @@
+<div id="main-block">
+    <menu>
+      <div *ngFor="let picture of pictures" (click)="selectPicture(picture)">
+        <p class="caption">{{ picture.author }}</p>
+        <img *ngIf="picture === selectedPicture || picture.stateTransient"
+             [@scale]="picture.state"
+             class="picture" alt="Picture"
+             src="{{ picture.pictureSource }}">
+      </div>
+    </menu>
+</div>
