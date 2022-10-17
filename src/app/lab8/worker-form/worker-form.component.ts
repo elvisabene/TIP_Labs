@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup } from "@angular/forms";
 import { DateHelper } from "../models";
+import { Guid } from "js-guid";
 
 @Component({
   selector: 'app-worker-form',
@@ -16,6 +17,7 @@ export class WorkerFormComponent implements OnInit {
   public salary?: number;
 
   public form: FormGroup = this.formBuilder.group({
+    id: [ Guid.newGuid().toString(), ],
     name: [],
     paymentPerHour: [],
     startDate: [],
@@ -68,6 +70,34 @@ export class WorkerFormComponent implements OnInit {
 
   emitRemove(): void {
     this.remove.emit();
+
+    const workerId = this.form.controls['id'].value;
+    window.localStorage.removeItem(workerId);
   }
 
+  save() {
+
+    const worker = this.readWorkerFromForm();
+
+    window.localStorage.setItem(worker.id, JSON.stringify(worker));
+  }
+
+  private readWorkerFromForm(): DomainWorker {
+    return {
+      id: this.form.controls['id'].value,
+      name: this.form.controls['name'].value,
+      paymentPerHour: this.form.controls['paymentPerHour'].value,
+      startDate: this.form.controls['startDate'].value,
+      endDate: this.form.controls['endDate'].value,
+    }
+  }
+
+}
+
+interface DomainWorker {
+  id: string
+  name: string,
+  paymentPerHour: number,
+  startDate: string,
+  endDate: string,
 }

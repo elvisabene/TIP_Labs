@@ -40,8 +40,16 @@
     <input disabled type="text" value="{{ salary | currency }}" />
   </div>
   <input
+    id="save-button"
+    type="button" value="Save"
+    class="control-button"
+    (click)="save()"
+  />
+  <input
     id="remove-button"
     type="button" value="Remove"
+    class="control-button"
     (click)="emitRemove()"
   />
+
 </div>

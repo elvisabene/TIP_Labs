@@ -1,12 +1,8 @@
-.worker-fields {
-  display: inline-block;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-
 .worker-field-set {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: fit-content;
   margin: 10px;
   padding: 10px;
   border: solid 3px blue;
@@ -26,17 +22,27 @@ label {
 }
 
 .field {
+  display: inline-block;
+  flex-direction: column;
   padding: 4px;
 }
 
-#remove-button {
+.control-button {
   font-size: 1.1rem;
-  background-color: crimson;
+
   padding: 5px 10px;
   border: transparent;
   border-radius: 20px;
   margin: 5px 25%;
   width: 50%;
+}
+
+#remove-button {
+  background-color: crimson;
+}
+
+#save-button {
+  background-color: dodgerblue;
 }
 
 input[type="button"]:hover {

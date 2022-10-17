@@ -9,6 +9,7 @@ import { lab6Routes } from "./lab6/lab6.module";
 import { lab7Routes } from "./lab7/lab7.module";
 import { lab8routes } from "./lab8/lab8.module";
 import { lab9routes } from "./lab9/lab9.module";
+import { lab10Routes } from "./lab10/lab10.module";
 
 const routes: Routes = [
   lab1Routes,
@@ -20,6 +21,7 @@ const routes: Routes = [
   lab7Routes,
   lab8routes,
   lab9routes,
+  lab10Routes,
 ];
 
 @NgModule({

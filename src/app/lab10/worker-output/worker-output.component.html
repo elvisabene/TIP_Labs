@@ -1,0 +1,6 @@
+<div class="worker" *ngFor="let worker of workers">
+  <p>
+    Worker {{ worker.name }} will be work from {{ worker.startDate }}
+    to {{ worker.endDate }} for {{ worker.paymentPerHour | currency }} per hour.
+  </p>
+</div>
