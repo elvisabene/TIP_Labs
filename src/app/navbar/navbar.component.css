@@ -1,12 +1,14 @@
 #main-nav {
   background: blue;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   padding: 10px;
 }
 
 a {
   text-decoration: none;
+  margin: 10px;
   font-size: 1.5em;
   color: ivory;
 }
