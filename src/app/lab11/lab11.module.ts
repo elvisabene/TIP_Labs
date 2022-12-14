@@ -8,11 +8,14 @@ export const lab11Routes: Route = {
 }
 
 @NgModule({
-  declarations: [
-    JquerySimpleComponentComponent
-  ],
-  imports: [
-    CommonModule
-  ]
+    declarations: [
+        JquerySimpleComponentComponent
+    ],
+    exports: [
+        JquerySimpleComponentComponent
+    ],
+    imports: [
+        CommonModule
+    ]
 })
 export class Lab11Module { }

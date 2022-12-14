@@ -9,6 +9,7 @@
 
 .caption {
   width: fit-content;
+  color: white;
   background-color: blue;
   padding: 1ex;
   border-radius: 0.5em;
